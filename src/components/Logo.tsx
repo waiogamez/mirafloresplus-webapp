@@ -1,12 +1,28 @@
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import logoImage from 'figma:asset/1cc1d9002fe4f269e47f84471215202a7d9070a9.png';
+/**
+ * Logo Component - Miraflores Plus
+ * Versión: Sin dependencia de assets externos
+ */
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <ImageWithFallback 
-      src={logoImage} 
-      alt="Miraflores Plus - Tu salud, a un clic de distancia" 
-      className={className || "w-full h-auto"}
-    />
+    <div className={`flex items-center gap-2 ${className || ''}`}>
+      {/* Logo Icon */}
+      <div 
+        className="w-10 h-10 rounded-lg flex items-center justify-center shadow-md" 
+        style={{ backgroundColor: '#0477BF' }}
+      >
+        <span className="text-white font-bold text-xl">M+</span>
+      </div>
+      
+      {/* Logo Text */}
+      <div className="flex flex-col">
+        <span className="font-bold text-lg leading-tight" style={{ color: '#0477BF' }}>
+          Miraflores Plus
+        </span>
+        <span className="text-xs text-gray-500 leading-tight">
+          Sistema de Salud
+        </span>
+      </div>
+    </div>
   );
 }
