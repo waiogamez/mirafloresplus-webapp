@@ -1,0 +1,124 @@
+/* === SIDEBAR (FIGMA STYLE) === */
+:root {
+  --mp-blue: #0477BF;
+  --mp-blue-2: #2BB9D9;
+  --mp-text: #0f172a;
+  --mp-muted: #64748b;
+  --mp-border: #e5e7eb;
+  --mp-bg: #ffffff;
+}
+
+ion-menu::part(container) {
+  background: var(--mp-bg);
+}
+
+.menu-header {
+  padding: 18px 16px 14px 16px;
+  background: linear-gradient(180deg, var(--mp-blue) 0%, var(--mp-blue-2) 100%);
+  color: #fff;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+.app-tagline {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  opacity: .95;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 14px;
+  padding: 10px 10px;
+}
+
+.user-info h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.user-info p {
+  margin: 2px 0 2px 0;
+  font-size: 12px;
+}
+
+.user-info ion-note {
+  font-size: 11px;
+  color: rgba(255,255,255,.9);
+}
+
+/* Contenido del menú */
+ion-content {
+  --background: #ffffff;
+}
+
+#menu-list {
+  padding: 10px 10px 14px 10px;
+}
+
+ion-list-header {
+  margin: 10px 8px 8px 8px;
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+/* Items */
+ion-item {
+  --background: transparent;
+  --color: var(--mp-text);
+  --min-height: 46px;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --inner-padding-end: 0px;
+  margin: 6px 6px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+ion-item ion-icon {
+  font-size: 18px;
+  color: #64748b;
+}
+
+/* Item seleccionado (pill azul) */
+ion-item.selected {
+  --background: var(--mp-blue);
+  --color: #ffffff;
+}
+
+ion-item.selected ion-icon {
+  color: #ffffff;
+}
+
+ion-item.selected ion-label {
+  font-weight: 700;
+}
+
+/* Separador suave */
+.menu-footer {
+  margin-top: 12px;
+  padding: 10px 16px;
+  border-top: 1px solid var(--mp-border);
+  color: #94a3b8;
+  font-size: 11px;
+}
